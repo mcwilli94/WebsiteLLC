@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">Attorney Lisl King Williams, LLC</title>
+
+    <link th:href="@{/styles.css}" rel="stylesheet" />
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<h1 th:text="Attorney Lisl King Williams, LLC"></h1>
+
+<nav th:fragment="navigation">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services Rendered</a></li>
+        <li><a href="/reviews">Reviews</a></li>
+        <li><a href="/contact">Contact Information</a></li>
+    </ul>
+</nav>
+
+<nav th:fragment="clientNavigation">
+    <table>
+        <tr>
+            <td><a href="/admin/clients">Client List</a></td>
+        </tr>
+        <tr>
+            <td><a href="/admin/add">Add Client</a></td>
+        </tr>
+    </table>
+</nav>
+
+
+<footer th:fragment="footer" class="footer">
+    <a href="/admin">Administrator</a>
+</footer>
+
+</body>
+</html>

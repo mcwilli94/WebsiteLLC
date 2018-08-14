@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body>
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<div class="left">
+    <p th:replace="fragments :: clientNavigation"></p>
+</div>
+
+<div class="right">
+    <form method = "post" action = "/admin/clients">
+        <table>
+            <tr>
+                <td><label>Entry Date: </label></td>
+                <td><input type="date" name="entryDate" /></td>
+            </tr>
+            <tr>
+                <td><label>Firstname: </label></td>
+                <td><input type="text" name="firstname" required="required" /></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label>Middlename: </label></td>
+                <td><input type="text" name="middlename" required="required" /></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label>Lastname: </label></td>
+                <td><input type="text" name="lastname" required="required" /></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label>Current Balance: </label></td>
+                <td><input type="number" name="currentBalance" min="0"/></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label>Client Status: </label></td>
+                <td><select name="clientStatus">
+                    <option hidden="hidden" selected="selected"> -- select an option -- </option>
+                    <option th:each="status : ${clientStatus}" th:text="${status}"></option>
+                </select></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Enter" /></td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+
+
+<footer th:replace="fragments:: footer"></footer>
+
+</body>
+</html>

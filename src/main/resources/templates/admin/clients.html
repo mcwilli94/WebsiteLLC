@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body>
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<p th:unless="${clients} and ${clients.size()}">There are currently no clients in the database</p>
+
+<div class="left">
+    <p th:replace="fragments :: clientNavigation"></p>
+</div>
+
+<div class="right">
+    <table class="table2">
+        <tr>
+            <th>Entry Date</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Current Balance</th>
+            <th>Client Status</th>
+        </tr>
+        <tr th:each="client : ${clients}">
+            <td th:text="${client.entryDate}"></td>
+            <td th:text="${client.lastname}"></td>
+            <td th:text="${client.firstname}"></td>
+            <td th:text="${client.middlename}"></td>
+            <td th:text="${client.currentBalance}"></td>
+            <td th:text="${client.clientStatus.name}"></td>
+        </tr>
+
+
+    </table>
+</div>
+
+<footer th:replace="fragments:: footer"></footer>
+
+</body>
+</html>

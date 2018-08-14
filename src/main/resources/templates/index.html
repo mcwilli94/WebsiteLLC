@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<div id="container">
+    <div class="left">
+    </div>
+
+
+
+    <div class="right">
+
+        <h3> Introduction </h3>
+        <br />
+
+        <p>
+            Lisl King Williams, LLC is a private practice run by me,
+            Attorney Lisl King Williams.  I practice exclusively in the
+            <b><u>State of Missouri</u></b>.  It is my practice to keep each
+            client involved in their own cases and to explain each and
+            every step to them. I personally handles all my
+            clients' cases, my goal being to keep her clients' informed
+            and involved in every step of their legal proceedings.
+            My areas of legal practice include Domestic Relations,
+            Municipal Cases, and Criminal Cases.
+        </p>
+
+        <p>
+            Domestic Relations is an area of law which involves divorce,
+            paternity, non paternity, child support establishment and modifications,
+            criminal non support, and custody and visitation.
+        </p>
+
+        <p>
+            Municipal is an area of law which involves traffic matters.  This includes
+            recalling warrants, setting up court dates, and settling cases.
+            My focus is on father's rights.  I have successfully
+            defended fathers rights at the Appellate court level, I have provided testimony
+            before the state legislature in support of expunging criminal non support
+            convictions.  Please see testimonials and interview websites.
+
+        </p>
+        <br />
+
+        <h3> Background </h3>
+        <br />
+        <p>
+            Attorney Williams graduated JD from Northwestern University School of Law and obtained
+            a Masters in Management from JL
+            Kellogg Graduate School Of Management 1981.  Attorney Williams also served
+            as a Municipal Court judge for nine years in the city of St. Louis.
+        </p>
+
+    </div>
+</div>
+
+<footer th:replace="fragments:: footer"></footer>
+
+</body>
+</html>
