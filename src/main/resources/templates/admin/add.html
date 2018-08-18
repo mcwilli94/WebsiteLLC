@@ -13,45 +13,44 @@
 </div>
 
 <div class="right">
-    <form method = "post" action = "/admin/clients">
+    <form method = "post" th:object="${clients}">
         <table>
             <tr>
-                <td><label>Entry Date: </label></td>
-                <td><input type="date" name="entryDate" /></td>
+                <td><label th:for="entryDate">Entry Date: </label></td>
+                <td><input th:field="*{entryDate}" type="date" /></td>
             </tr>
             <tr>
-                <td><label>Firstname: </label></td>
-                <td><input type="text" name="firstname" required="required" /></td>
-                <td></td>
+                <td><label th:for="firstname">Firstname: </label></td>
+                <td><input th:field="*{firstname}" type="text" required="required" /></td>
+                <td><span th:errors="*{firstname}" class="error"></span></td>
             </tr>
             <tr>
-                <td><label>Middlename: </label></td>
-                <td><input type="text" name="middlename" required="required" /></td>
-                <td></td>
+                <td><label th:for="middlename">Middlename: </label></td>
+                <td><input th:field="*{middlename}" type="text" required="required" /></td>
             </tr>
             <tr>
-                <td><label>Lastname: </label></td>
-                <td><input type="text" name="lastname" required="required" /></td>
-                <td></td>
+                <td><label th:for="lastname">Lastname: </label></td>
+                <td><input th:field="*{lastname}" type="text" required="required" /></td>
+                <td><span th:errors="*{lastname}" class="error"></span></td>
             </tr>
             <tr>
-                <td><label>Current Balance: </label></td>
-                <td><input type="number" name="currentBalance" min="0"/></td>
-                <td></td>
+                <td><label th:for="currentBalance">Current Balance: </label></td>
+                <td><input th:field="*{currentBalance}" type="number" min="0" /></td>
             </tr>
             <tr>
-                <td><label>Client Status: </label></td>
-                <td><select name="clientStatus">
-                    <option hidden="hidden" selected="selected"> -- select an option -- </option>
-                    <option th:each="status : ${clientStatus}" th:text="${status}"></option>
+                <td><label th:for="clientStatus">Client Status: </label></td>
+                <td><select th:field="*{clientStatus}">
+                    <option hidden="hidden" selected="selected" th:value="NULL"> -- select an option -- </option>
+                    <option th:each="status : ${statuses}"
+                            th:text="${status.name}"
+                            th:value="${clientStatus}"></option>
                 </select></td>
-                <td></td>
             </tr>
             <tr>
+                <td></td>
                 <td><input type="submit" value="Enter" /></td>
             </tr>
         </table>
-
     </form>
 </div>
 

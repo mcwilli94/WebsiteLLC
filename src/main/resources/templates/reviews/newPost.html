@@ -9,28 +9,28 @@
 <nav th:replace="fragments :: navigation"></nav>
 
 <div class="right">
-    <form method = "post" action="/reviews" th:object="${users}">
+    <form method = "post" th:object="${users}">
         <table>
             <tr class="form-group">
                 <td><label th:for="username">Username: </label></td>
-                <td><input th:field="*{username}" name="username" type="email" placeholder="Enter email"/></td>
+                <td><input th:field="*{username}" type="text" placeholder="Enter email"/></td>
                 <td><span th:errors="*{username}" class="error"></span></td>
             </tr>
             <tr class="form-group">
                 <td><label th:for="password">Password: </label></td>
-                <td><input th:field="*{password}" name="password" type="password" required="required" placeholder="Enter password"/></td>
+                <td><input th:field="*{password}" type="password" required="required" placeholder="Enter password"/></td>
                 <td><span th:errors="*{password}" class="error"></span></td>
             </tr>
             <tr class="form-group">
                 <td><label th:for="rating">Please rate Attorney Williams' service from 1 to 5 stars </label></td>
-                <td><input th:field="*{rating}" name="rating" type="number" required="required"
+                <td><input th:field="*{rating}" type="number" required="required"
                            min="1" max="5" /></td>
                 <td><span th:errors="*{rating}" class="error"></span></td>
             </tr>
             <tr class="form-group">
                 <td><label th:for="comment">Please comment about your experiences as a client with Attorney
                     Williams in the textbox below</label></td>
-                <td><textarea th:field="*{comment}" rows="6" cols="60" required="required" name="comment" placeholder="Comments"></textarea></td>
+                <td><textarea th:field="*{comment}" required="required" rows="6" cols="60" placeholder="Comments"></textarea></td>
             </tr>
             <tr class="form-group">
                 <td></td>

@@ -43,8 +43,28 @@ h1
 
 }
 
+// table style for reviews
+.table1{
+    border-collapse: collapse;
+}
+
+    .table1 tr:first-child{
+        font-weight: bold;
+        font-size: 20px;
+        border-bottom: 5px solid black;
+    }
+
+    .table1, .tr1, .td1 {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid black;
+        width: 75%;
+        border-radius: 18px;
+    }
 
 
+
+// table style for clients
 .table2, .th2, .td2, .tr2 {
     border-collapse: collapse;
 	text-align: center;
@@ -52,17 +72,18 @@ h1
 	width: 100%;
 }
 
+    .table2 tr:nth-child(even) {
+        background-color: #efefef;
+    }
 
-.table2 tr:nth-child(even) {
-    background-color: #efefef;
-}
+    .table2 tr:hover {
+        background-color: #4b545f;
+    }
 
-
-.table2 tr:hover {
-    background-color: #4b545f;
-}
-
-
+    .table2, .th2, .td2 {
+        padding: 10 px;
+        text-align: left;
+    }
 
 
 nav ul ul {
@@ -90,7 +111,9 @@ nav ul {
 }
 
 	nav ul::after {
-		content: ""; clear: both; display: block;
+		content: "";
+		clear: both;
+		display: block;
 	}
 
 

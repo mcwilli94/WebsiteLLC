@@ -12,6 +12,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 import javax.validation.Valid;
@@ -65,18 +66,17 @@ public class AdministratorLogin {
 
         model.addAttribute(new Clients());
         model.addAttribute("title", "Attorney Lisl King Williams, LLC");
-        model.addAttribute("clientStatus", ClientType.values());
+        model.addAttribute("statuses", ClientType.values());
 
         return "admin/add";
     }
 
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
-    public String addClient(Model model, @ModelAttribute @Valid Clients newClient, Errors errors){
+    public String addClient(Model model, @ModelAttribute @Valid Clients clients, Errors errors){
 
-        System.out.println("running");
-        System.out.println(errors);
-        System.out.println(newClient);
+        System.out.println(clients.getFirstname());
+        System.out.println(clients.getClientStatus().getName());
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Attorney Lisl King Williams, LLC");
@@ -84,7 +84,7 @@ public class AdministratorLogin {
         }
 
         model.addAttribute("title", "Attorney Lisl King Williams, LLC");
-        clientsDao.save(newClient);
+        clientsDao.save(clients);
 
         return "admin/clients";
     }

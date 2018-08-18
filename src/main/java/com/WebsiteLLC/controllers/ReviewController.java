@@ -31,19 +31,16 @@ public class ReviewController {
     @RequestMapping(value = "newPost", method = RequestMethod.GET)
     public String createNewPost(Model model){
 
-        model.addAttribute("users", new Users());
+        model.addAttribute(new Users());
         model.addAttribute("title", "Attorney Lisl King Williams, LLC");
 
         return "reviews/newPost";
     }
 
     @RequestMapping(value = "newPost", method = RequestMethod.POST)
-    public String processNewPost(Model model, @ModelAttribute  @Valid Users users, Errors errors) {
+    public String processNewPost(Model model, @ModelAttribute @Valid Users users, Errors errors) {
 
         model.addAttribute("title", "Attorney Lisl King Williams, LLC");
-        System.out.println(users.getUsername());
-        System.out.println(users.getId());
-        System.out.println("working");
 
         if (errors.hasErrors()){
             return "reviews/newPost";

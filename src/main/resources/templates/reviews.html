@@ -15,7 +15,7 @@
 </div>
 
 <div class="right">
-    <table th:each="user : ${users}">
+    <table th:each="user : ${users}" class="table1">
         <tr>
             <td>Anonymous</td>
             <td th:text="${user.rating}"></td>
@@ -23,8 +23,10 @@
         <tr>
             <td colspan="2" th:text="${user.comment}"></td>
         </tr>
+        <br />
     </table>
 
+    <br />
     <table>
         <tr>
             <form method="post" action="/reviews/newPost">

@@ -72,7 +72,7 @@ public class Users {
     //Constructors
     public Users(){}
 
-    public Users(String username, String password, Integer  rating, String comment){
+    public Users(String username, String password, Integer rating, String comment){
         this.username = username;
         this.password = password;
         this.comment = comment;
