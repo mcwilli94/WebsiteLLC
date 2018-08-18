@@ -13,16 +13,16 @@ import javax.validation.Valid;
 
 
 @Controller
-@RequestMapping("/reviews")
+@RequestMapping("/contact")
+public class ContactController {
 
-public class Reviews {
 
     @RequestMapping(value = "")
     public String index(Model model) {
 
         model.addAttribute("title", "Attorney Lisl King Williams, LLC");
 
-        return "reviews";
+        return "contact";
     }
 
 }

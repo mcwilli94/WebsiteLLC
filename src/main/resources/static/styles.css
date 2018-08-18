@@ -35,11 +35,6 @@ h1
 }
 
 
-#container
-{
-    width: 100%;
-}
-
 
 #map_canvas  {
 	height: 400px;
@@ -194,9 +189,10 @@ nav ul ul ul {
 }
 
 
+
 #googleMap
 {
-    width: 250px;
-    height: 250px;
-    background-color: #5959BD;
+    width: 600px;
+    height: 450px;
+    align: middle;
 }

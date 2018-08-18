@@ -8,6 +8,35 @@
 
 <nav th:replace="fragments :: navigation"></nav>
 
+<p th:unless="${users} and ${users.size()}">There are currently no reviews in the database</p>
+
+<div class="left">
+    <p>Left side of the page</p>
+</div>
+
+<div class="right">
+    <table th:each="user : ${users}">
+        <tr>
+            <td>Anonymous</td>
+            <td th:text="${user.rating}"></td>
+        </tr>
+        <tr>
+            <td colspan="2" th:text="${user.comment}"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <form method="post" action="/reviews/newPost">
+            <td><input type="submit" value="Post Comment" /></td>
+            </form>
+        </tr>
+    </table>
+
+
+</div>
+
+
 <footer th:replace="fragments:: footer"></footer>
 
 </body>
