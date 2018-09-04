@@ -17,20 +17,20 @@
         <table>
             <tr>
                 <td><label th:for="entryDate">Entry Date: </label></td>
-                <td><input th:field="*{entryDate}" type="date" /></td>
+                <td><input th:field="*{entryDate}" /></td>
             </tr>
             <tr>
                 <td><label th:for="firstname">Firstname: </label></td>
-                <td><input th:field="*{firstname}" type="text" required="required" /></td>
+                <td><input th:field="*{firstname}" required="required" /></td>
                 <td><span th:errors="*{firstname}" class="error"></span></td>
             </tr>
             <tr>
                 <td><label th:for="middlename">Middlename: </label></td>
-                <td><input th:field="*{middlename}" type="text" required="required" /></td>
+                <td><input th:field="*{middlename}" /></td>
             </tr>
             <tr>
                 <td><label th:for="lastname">Lastname: </label></td>
-                <td><input th:field="*{lastname}" type="text" required="required" /></td>
+                <td><input th:field="*{lastname}" required="required" /></td>
                 <td><span th:errors="*{lastname}" class="error"></span></td>
             </tr>
             <tr>
@@ -43,7 +43,7 @@
                     <option hidden="hidden" selected="selected" th:value="NULL"> -- select an option -- </option>
                     <option th:each="status : ${statuses}"
                             th:text="${status.name}"
-                            th:value="${clientStatus}"></option>
+                            th:value="${status}"></option>
                 </select></td>
             </tr>
             <tr>

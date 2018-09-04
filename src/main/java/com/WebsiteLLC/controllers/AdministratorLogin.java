@@ -75,9 +75,6 @@ public class AdministratorLogin {
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public String addClient(Model model, @ModelAttribute @Valid Clients clients, Errors errors){
 
-        System.out.println(clients.getFirstname());
-        System.out.println(clients.getClientStatus().getName());
-
         if (errors.hasErrors()) {
             model.addAttribute("title", "Attorney Lisl King Williams, LLC");
             return "admin/add";
