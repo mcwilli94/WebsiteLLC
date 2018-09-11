@@ -25,6 +25,17 @@ h1
 }
 
 
+h3
+{
+    text-align: center;
+    font: 35px bold, Cambria;
+    text-transform: uppercase;
+}
+
+p
+{
+    font: 30px, Cambria;
+}
 #imageHead {
 	width: 100px;
 	Height: 100px;
@@ -42,6 +53,20 @@ h1
 	background-color: gold;
 
 }
+
+
+//table style for side menu
+.tableLeft{
+    border-collapse: collapse
+}
+
+    .tableLeft td{
+        text-align: center;
+        border-style: outset;
+        font-weight: bold;
+    }
+
+
 
 // table style for reviews
 .table1{

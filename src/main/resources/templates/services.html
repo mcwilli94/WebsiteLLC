@@ -4,9 +4,40 @@
 
 <body>
 
-<h1 th:text="${title}">Default Title</h1>
+<h1 th:replace="fragments :: title"></h1>
 
 <nav th:replace="fragments :: navigation"></nav>
+
+<div class="left">
+    <p th:replace="fragments :: scrollingNavigation"></p>
+</div>
+
+<div class="right">
+    <h3>Establishing Paternity</h3>
+    <h3>Establishing Non-Paternity</h3>
+    <h3>Custody and Visitation Orders</h3>
+    <h3>Modifying custody and visitation orders</h3>
+    <h3>GUARDIANSHIPs</h3>
+    <h3>THIRD PARTY CUstody</h3>
+    <h3>GRANDPARENTS RIGHTS</h3>
+    <h3>Contempt actions</h3>
+    <h3>Family access motions</h3>
+    <h3>Divorce with and without children</h3>
+    <h3>Establishing child support orders</h3>
+    <h3>Modifying child support orders</h3>
+    <h3>Driver license suspensions</h3>
+    <h3>Professional license and passport suspensions</h3>
+    <h3>Child support hardship requests</h3>
+    <h3>Affidavit of credits</h3>
+    <h3>Child support terminations</h3>
+    <h3>Child support abatements</h3>
+    <h3>Motion to determine amounts due</h3>
+    <h3>Criminal non-support</h3>
+    <h3>Child support civil contempts</h3>
+
+    <h3>Traffic/DWI</h3>
+
+</div>
 
 </body>
 </html>

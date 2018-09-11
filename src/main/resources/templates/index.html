@@ -5,11 +5,12 @@
 <body class="container">
 
 
-<h1 th:text="${title}">Default Title</h1>
+<h1 th:replace="fragments :: title"></h1>
 
 <nav th:replace="fragments :: navigation"></nav>
 
     <div class="left">
+        <p th:replace="fragments :: scrollingNavigation"></p>
     </div>
 
 
@@ -20,46 +21,60 @@
         <br />
 
         <p>
-            Lisl King Williams, LLC is a private practice run by me,
-            Attorney Lisl King Williams.  I practice exclusively in the
-            <b><u>State of Missouri</u></b>.  It is my practice to keep each
-            client involved in their own cases and to explain each and
-            every step to them. I personally handles all my
-            clients' cases, my goal being to keep her clients' informed
-            and involved in every step of their legal proceedings.
-            My areas of legal practice include Domestic Relations,
-            Municipal Cases, and Criminal Cases.
-        </p>
-
-        <p>
-            Domestic Relations is an area of law which involves divorce,
-            paternity, non paternity, child support establishment and modifications,
-            criminal non support, and custody and visitation.
-        </p>
-
-        <p>
-            Municipal is an area of law which involves traffic matters.  This includes
-            recalling warrants, setting up court dates, and settling cases.
-            My focus is on father's rights.  I have successfully
-            defended fathers rights at the Appellate court level, I have provided testimony
-            before the state legislature in support of expunging criminal non support
-            convictions.  Please see testimonials and interview websites.
-
+            Lisl King Williams has been practicing law since 1981 and from 1999
+            to 2009 she was a Municipal court judge for the City of St. Louis.
+            Since 2009 her practice has concentrated on domestic relations with
+            an emphasis on father’s rights.  Attorney Williams has represented
+            over ______ men in domestic relations matters.  This includes
+            establishing paternity and obtaining court ordered custody and
+            visitation plans.  Establishing non-paternity and setting aside
+            affidavits of paternity and other court orders establishing paternity.
+            She successfully brought the first appellate court case in the
+            state of Missouri under the non-paternity statute.  Attorney
+            Williams works with clients to establish child support orders,
+            modify existing child support orders, obtain hardship with
+            respect to the collection of past due child support, obtain
+            stays on driver’s license suspensions, abating and terminating
+            child support orders, restoring professional licenses and
+            passports as a result of past due child support and representing
+            parents charged with felony/misdemeanor criminal non-support
+            cases and child support civil contempt cases.  Attorney Williams
+            is a solo practitioner so you can fell confident that she will
+             be handling your legal needs personally and she will be appearing in court with you.
         </p>
         <br />
 
         <h3> Background </h3>
         <br />
         <p>
-            Attorney Williams graduated JD from Northwestern University School of Law and obtained
-            a Masters in Management from JL
-            Kellogg Graduate School Of Management 1981.  Attorney Williams also served
-            as a Municipal Court judge for nine years in the city of St. Louis.
+            Attorney Williams graduated in 1981 rom Northwestern
+            University School of Law with a J.D.  She received
+            a Masters in Management from the JL Kellogg Graduate
+            school of Management n/k/a_________.  For additional
+            information on Attorney Williams education and
+            professional experience <a>click here.</a>
+        </p>
+        <br />
+
+        <h3> Professional Philosophy</h3>
+        <br />
+        <p>
+            My professional philosophy is to treat all clients
+            the way I would want to be treated and to accept
+            my clients where they are without judgment.  I realize
+            that this is a very emotional and stressful time
+            for my clients and I strive to be understanding of
+            their situation.  I personally believe that it is
+            in every child’s interest to have two viable parents
+            in their lives, however, I recognize that that is not
+            always possible.  Nevertheless, no parent regardless
+            of their personal situation should be without some
+            sort of contact with their children and I advocate
+            for my clients to have a meaningful relationship
+            with their children.
         </p>
 
     </div>
-
-<footer th:replace="fragments:: footer"></footer>
 
 </body>
 </html>

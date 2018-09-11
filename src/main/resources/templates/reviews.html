@@ -4,14 +4,14 @@
 
 <body>
 
-<h1 th:text="${title}">Default Title</h1>
+<h1 th:replace="fragments :: title"></h1>
 
 <nav th:replace="fragments :: navigation"></nav>
 
 <p th:unless="${users} and ${users.size()}">There are currently no reviews in the database</p>
 
 <div class="left">
-    <p>Left side of the page</p>
+    <p th:replace="fragments :: scrollingNavigation"></p>
 </div>
 
 <div class="right">

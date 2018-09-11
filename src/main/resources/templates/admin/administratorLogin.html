@@ -4,7 +4,7 @@
 
 <body>
 
-<h1 th:text="${title}">Default Title</h1>
+<h1 th:replace="fragments :: title"></h1>
 
 <nav th:replace="fragments :: navigation"></nav>
 
@@ -13,7 +13,7 @@
         <table>
             <tr>
                 <td><label>Username: </label></td>
-                <td><input type="text" name="username" required="required" /></td>
+                <td><input type="email" name="username" required="required" /></td>
             </tr>
             <tr>
                 <td><label>Password: </label></td>

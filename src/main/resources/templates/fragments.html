@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<h1 th:text="Attorney Lisl King Williams, LLC"></h1>
+<h1 th:fragment="title">Lisl King Williams, LLC <br />Attorney at Law</h1>
 
 <nav th:fragment="navigation">
     <ul>
@@ -19,6 +19,26 @@
         <li><a href="/reviews">Reviews</a></li>
         <li><a href="/contact">Contact Information</a></li>
     </ul>
+</nav>
+
+<nav th:fragment="scrollingNavigation">
+    <table class="tableLeft">
+        <tr>
+            <td><a href="/">Home</a></td>
+        </tr>
+        <tr>
+            <td><a href="/services">Services Rendered</a></td>
+        </tr>
+        <tr>
+            <td><a href="/reviews">Reviews</a></td>
+        </tr>
+        <tr>
+            <td><a href="/contact">Contact Information</a></td>
+        </tr>
+        <tr>
+            <td><a href="/admin">Administrator</a></td>
+        </tr>
+    </table>
 </nav>
 
 <nav th:fragment="clientNavigation">

@@ -4,7 +4,7 @@
 
 <body>
 
-<h1 th:text="${title}">Default Title</h1>
+<h1 th:replace="fragments :: title"></h1>
 
 <nav th:replace="fragments :: navigation"></nav>
 
@@ -15,11 +15,11 @@
 </div>
 
 <div class="right">
-    <table class="table2">
+    <table class="table2" name="clientList">
         <tr>
-            <th>Entry Date</th>
-            <th>Last Name</th>
-            <th>First Name</th>
+            <th onclick="">Entry Date</th>
+            <th onclick="">Last Name</th>
+            <th onclick="">First Name</th>
             <th>Middle Name</th>
             <th>Current Balance</th>
             <th>Client Status</th>
@@ -32,9 +32,8 @@
             <td th:text="${client.currentBalance}"></td>
             <td th:text="${client.clientStatus.name}"></td>
         </tr>
-
-
     </table>
+
 </div>
 
 <footer th:replace="fragments:: footer"></footer>
